@@ -47,7 +47,7 @@ window.setInterval(function(){
 		*/
 		
 		//check collision
-		if(parseInt(selectedWall.style.left, 10) == 100){
+		if(parseInt(selectedWall.style.left, 10) == 200){
 			if(position >= wallPos[i]+110 || position <= wallPos[i]){
 				Respawn();
 			} else {
