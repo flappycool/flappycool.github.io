@@ -56,12 +56,6 @@ window.setInterval(function(){
 				scoreAudio.play();
 			}
 		}
-		
-		var leftFloat = parseFloat(selectedWall.style.left, 10);
-		
-		if(leftFloat < 0){
-			selectedWall.outerHTML = "";
-		}
 	}
 	
 	if(flapping == true){
