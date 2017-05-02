@@ -2,45 +2,33 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link rel="icon" type="image/png" href="icon.png">
-		<title>not ballz</title>
-		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' name='viewport'/>
+		<link rel="icon" type="image/png" href="minion.png">
+		<title>flappy cool</title>
+		<meta content='width=device-width, initial-scale=0.7, maximum-scale=0.7, user-scalable=0' name='viewport'/>
 	</head>
 	<body>
-		<div id="container" style="opacity:0;transition:3s">
-			<div onmousedown="return false">
-				<div id="touchOverlay" onclick="Shoot()" style="width:100%;height:100%;z-index:5;position:fixed;cursor:pointer"></div>
-			</div>
-			<div id="score" style="position:absolute;top:-1%;width:100%;color:white;text-align:center;opacity:0;font-size:80px;transition:1s;z-index:1">0</div>
-			
-			<div id="balltext" style="position:absolute;top:-1%;width:99%;color:white;text-align:right;font-size:80px;opacity:0;transition:1s"><span id="ballsAmount"></span><span style="font-size:20px">balls</span></div>
-			
-			<div id="highscoreText" style="position:fixed;top:11px;left:10px;color:white;text-align:center;transition:3s">Highscore</div>
-			<div id="highscore" style="position:fixed;width:92px;top:30px;left:10px;color:white;text-align:center;font-size:50px"></div>
-			
-			<div class="ball"></div>
-			<div id="extraballs"></div>
-			
-			<div id="arrow" class="arrow" style="position:fixed;left:0px;top: 850px;opacity:0"></div>
-			<div id="arrow2" class="arrow" style="position:fixed;left:0px;top: 850px;opacity:0"></div>
-			
-			<div id="cover"><span id="tutorial" style="font-size:2vw;position:relative;left:37vw;top:1vw;color:white;transition:2s">Don't let blocks get to the line</span></div>
-			
-			<div id="blocks"></div>
-			<div id="barrier"></div>
-			<div id="barrier2"></div>
-			
-			<button id="deleteSave" onclick="DeleteSave()" style="position:fixed;z-index:99999999;font-size:15px;right:10px;bottom:10px">delete save</div>
-		</div>	
-		
-		<div id="gameover" style="position:fixed;top:40%;width:100%;color:white;text-align:center;transition:1s;opacity:0;z-index:11;pointer-events:none">
-			<div style="font-size:50px">game over</div>
-			<div style="font-size:30px">you scored</div>
-			<div id="finalScore" style="font-size:80px">3</div>
-			<button id="restartButton" onclick="HideGameOver()">try again</button>
+		<div onmousedown="return false">
+			<div id="touchOverlay" onclick="Flap()" style="width:100%;height:100%;z-index:999999;position:fixed;cursor:pointer"></div>
 		</div>
-		<div id= "overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background-color:black;z-index:10;opacity:0;pointer-events:none;transition:1s"></div>
+		<div id="boundaries"></div>
+		<div id="background" style="top:0px;display:fixed"></div>
+		<div id="background2" style="top:0px"></div>
+		<div id="title">Flappy Cool</div>
+		<div id="bird" style="position:fixed;top:1px;left:200px"></div>
 		
+		<div id="walls">
+		</div>
+		
+		<div style="position:fixed;top:11px;left:20px;color:white;text-align:center">Score</div>
+		<div id="score" style="position:fixed;width:53px;top:30px;left:20px;color:white;text-align:center;font-size:50px"></div>
+		
+		<div style="position:fixed;top:11px;left:90px;color:white;text-align:center">Highscore</div>
+		<div id="highscore" style="position:fixed;width:90px;top:30px;left:90px;color:white;text-align:center;font-size:50px"></div>
+		
+		<div id="position" style="position:fixed;top:905px;left:20px;color:white"></div>
+		
+		<div style="color:white;font-size:3vw;position:fixed;top:1200px;left:800px">zoom in idiot</div>
+		<div style="color:white;font-size:3vw;position:fixed;top:400px;left:2200px">zoom in idiot</div>
 	</body>
 	<script type="text/javascript" src="main.js"></script>
 </html>
